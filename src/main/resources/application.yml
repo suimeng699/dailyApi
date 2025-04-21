@@ -7,13 +7,13 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ai_user?timezone=UTC
-    username: root
-    password: 050109
+    username: sql_username
+    password: sql_password
   data:
     redis:
       host: 127.0.0.1
       port: 6379
-      password: 050109
+      password: redis_password
       database: 0
 
 mybatis:
