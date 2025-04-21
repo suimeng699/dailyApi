@@ -1,4 +1,4 @@
-package com.suimeng.domain.pojo;
+package com.suimeng.domain.pojo.ai;
 
 import java.util.List;
 

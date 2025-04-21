@@ -1,11 +1,13 @@
 package com.suimeng.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @ConfigurationProperties(prefix = "ai-chat")
+@Component
 public class AIProperties {
     private Map<String, AI> ais = new HashMap<>();
 

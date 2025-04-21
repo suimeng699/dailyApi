@@ -11,7 +11,7 @@ public class AIController {
     @Autowired
     private AIService aIService;
     @PostMapping ("/client")
-    public Result deepSeek(@RequestParam("content") String content,@RequestParam("name") String name) {
+    public Result<String> deepSeek(@RequestParam("content") String content,@RequestParam("name") String name) {
         return Result.success(aIService.sendRequest(content, name));
     }
 }

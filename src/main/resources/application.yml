@@ -1,12 +1,20 @@
 spring:
   application:
     name: dailyApi
+  config:
+    import: properties.yml
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/lmy?timezone=UTC
+    url: jdbc:mysql://localhost:3306/ai_user?timezone=UTC
     username: root
-    password: 20041129gj
+    password: 050109
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: 050109
+      database: 0
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -14,15 +22,24 @@ mybatis:
 ai-chat:
   ais:
     deepseek:
-      name: deepseek
-      url: https://api.deepseek.com/chat/completions
-      model: deepseek-chat
-      key: key
+      name: ${ai.deepseek.name}
+      url: ${ai.deepseek.url}
+      model: ${ai.deepseek.model}
+      key: ${ai.deepseek.key}
     kimi:
-      name: kimi
-      url: https://api.moonshot.cn/v1/chat/completions
-      model: moonshot-v1-8k
-      key: key
+      name: ${ai.kimi.name}
+      url: ${ai.kimi.url}
+      model: ${ai.kimi.model}
+      key: ${ai.kimi.key}
+
+meitu:
+  meitus:
+    cutout:
+      key: ${meitu.meitu_cutout.key}
+      secret: ${meitu.meitu_cutout.secret}
+    common:
+      key: ${meitu.meitu_common.key}
+      secret: ${meitu.meitu_common.secret}
 
 #deepseek_key=DEEPSEEK_KEY
 #deepseek_url=https://api.deepseek.com/chat/completions

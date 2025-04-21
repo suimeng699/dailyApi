@@ -1,4 +1,4 @@
-package com.suimeng.domain.pojo;
+package com.suimeng.domain.pojo.ai;
 
 public class Choice {
     private Message message;

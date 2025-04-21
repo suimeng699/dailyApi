@@ -1,4 +1,4 @@
-package com.suimeng.domain.pojo;
+package com.suimeng.domain.pojo.ai;
 
 public class Message {
     String role;// 角色
