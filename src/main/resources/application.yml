@@ -5,10 +5,16 @@ spring:
     import: properties.yml
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    druid:
-      url: jdbc:mysql://localhost:3306/ai_user?timezone=UTC
-      username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ai_user?timezone=UTC
+    username: root
+    password: 050109
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
       password: 050109
+      database: 0
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -34,6 +40,10 @@ meitu:
     common:
       key: ${meitu.meitu_common.key}
       secret: ${meitu.meitu_common.secret}
-jwt:
-  secret: xWs93kr2Wp0FwnkWIisEJY5Ebqi2avn897G/Pm/rLvu/lWFSfANusbiAajCpEQblkJ7uqGLpbkEGMnFtZNThyg==
-  expiration: 86400
+
+#deepseek_key=DEEPSEEK_KEY
+#deepseek_url=https://api.deepseek.com/chat/completions
+#deepseek_model=deepseek-chat
+#kimi_key=KIMI_KEY
+#kimi_url=https://api.moonshot.cn/v1/chat/completions
+#kimi_model=moonshot-v1-8k
