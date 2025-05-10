@@ -1,0 +1,1 @@
+import{_ as n,x as s,c as r,o as a,b as t,y as l,z as d,A as u}from"./index-D_IbfUJW.js";const _={},c={class:"not-found"};function f(i,o){const e=s("router-link");return a(),r("div",c,[o[1]||(o[1]=t("h1",null,"404",-1)),o[2]||(o[2]=t("p",null,"页面不存在",-1)),l(e,{to:"/"},{default:d(()=>o[0]||(o[0]=[u("返回首页")])),_:1})])}const m=n(_,[["render",f]]);export{m as default};

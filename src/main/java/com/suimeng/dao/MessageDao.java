@@ -1,16 +1,18 @@
 package com.suimeng.dao;
 
-import com.suimeng.domain.pojo.UserMessage;
+import com.suimeng.domain.pojo.ChatMessage;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
 public interface MessageDao {
-    @Select("select message_id messageId, user_id userId, message from db_message where user_id = #{userId}")
-    public List<UserMessage> getMessage(Integer userId);
-    @Select("insert into db_message (user_id, message) values (#{userId}, #{message})")
-    public UserMessage insertMessage(UserMessage userMessage);
+    @Select("select message_id messageId, session_id sessionId,is_user isUser, message , snow_id snowId from tb_message where session_id = #{sessionId}")
+    public List<ChatMessage> getMessageUserBySessionId(Long sessionId);
+    @Insert("INSERT INTO tb_message(message, session_id, is_user, snow_id) VALUES (#{message}, #{sessionId}, #{isUser}, #{snowId})")
+    @Options(useGeneratedKeys = true, keyProperty = "messageId")
+    public int insertMessage(ChatMessage chatMessage);
 }

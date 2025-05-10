@@ -1,4 +1,4 @@
-package com.suimeng.properties;
+package com.suimeng.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

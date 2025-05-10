@@ -1,14 +1,17 @@
 package com.suimeng.domain.pojo;
 
 public class  Result<T> {
-    private String code;
+    private Integer code;
     private String msg;
     private T data;
 
-    public Result(String code, String msg, T data) {
+    public Result(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
+    }
+    public static <T> Result success() {
+        return new Result(Code.SUCCESS, "", null);
     }
 
     public static <T> Result success(T data) {
@@ -17,14 +20,14 @@ public class  Result<T> {
     public static <T> Result success(String msg,T data) {
         return new Result(Code.SUCCESS, msg, data);
     }
-    public static <T> Result fail(String msg) {
+    public static <T> Result error(String msg) {
         return new Result(Code.FAIL, msg, null);
     }
-    public String getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 

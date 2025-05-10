@@ -1,6 +1,6 @@
 package com.suimeng.domain.pojo;
 
 public class Code {
-    public static final String SUCCESS = "200";
-    public static final String FAIL = "500";
+    public static final Integer SUCCESS = 200;
+    public static final Integer FAIL = 500;
 }
