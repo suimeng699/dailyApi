@@ -3,11 +3,11 @@ ai:
     name: deepseek
     url: https://api.deepseek.com/chat/completions
     model: deepseek-chat
-    key: sk-42ca9ffaa2374ceb99531934e5ffadc1
+    key: 
   kimi:
     name: kimi
     url: https://api.moonshot.cn/v1/chat/completions
     model: moonshot-v1-8k
-    key: sk-EbK44n2e0ip2LA3qFpAuRmHSM2snd0FroCeIFBXsRivQwVnD
-  secret: xWs93kr2Wp0FwnkWIisEJY5Ebqi2avn897G/Pm/rLvu/lWFSfANusbiAajCpEQblkJ7uqGLpbkEGMnFtZNThyg==
+    key: 
+  secret: 
   expiration: 86400
